@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AutoFix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>AutoFix</h1>
+    <span>Usuário: Administrador</span>
+    <button onclick="sair()">Sair</button>
+</header>
+
+<nav>
+    <button onclick="mostrar('dashboard')">Dashboard</button>
+    <button onclick="mostrar('clientes')">Clientes</button>
+    <button onclick="mostrar('veiculos')">Veículos</button>
+    <button onclick="mostrar('ordens')">Ordens de Serviço</button>
+</nav>
+
+<main>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+        <div>Clientes<br><b>3</b></div>
+        <div>Veículos<br><b>3</b></div>
+        <div>Ordens<br><b>3</b></div>
+    </div>
+
+</section>
+
+
+<!-- CLIENTES -->
+
+<section id="clientes" class="oculto">
+
+    <h2>Clientes</h2>
+
+    <input id="nome" placeholder="Nome">
+    <input id="cpf" placeholder="CPF">
+    <input id="telefone" placeholder="Telefone">
+
+    <button onclick="adicionarCliente()">Cadastrar</button>
+
+    <input
+        id="busca"
+        placeholder="Buscar cliente"
+        onkeyup="buscar()"
+    >
+
+    <ul id="listaClientes">
+
+        <li>João Silva - 123.456.789-00</li>
+        <li>Maria Souza - 987.654.321-00</li>
+        <li>Carlos Lima - 111.222.333-44</li>
+
+    </ul>
+
+</section>
+
+
+<!-- VEÍCULOS -->
+
+<section id="veiculos" class="oculto">
+
+    <h2>Veículos</h2>
+
+    <input id="placa" placeholder="Placa">
+    <input id="marca" placeholder="Marca">
+    <input id="modelo" placeholder="Modelo">
+    <input id="ano" placeholder="Ano">
+
+    <button onclick="adicionarVeiculo()">
+        Cadastrar
+    </button>
+
+    <ul id="listaVeiculos">
+
+        <li>ABC1234 - Fiat Uno - João Silva</li>
+        <li>DEF5678 - Volkswagen Gol - Maria Souza</li>
+        <li>GHI9012 - Toyota Corolla - Carlos Lima</li>
+
+    </ul>
+
+</section>
+
+
+<!-- ORDENS -->
+
+<section id="ordens" class="oculto">
+
+    <h2>Ordens de Serviço</h2>
+
+    <input id="servico" placeholder="Serviço">
+    <input id="valor" placeholder="Valor">
+
+    <select id="status">
+        <option>Aberta</option>
+        <option>Em andamento</option>
+        <option>Concluída</option>
+    </select>
+
+    <button onclick="adicionarOS()">
+        Cadastrar
+    </button>
+
+    <ul id="listaOS">
+
+        <li>30/09/2026 - Troca de óleo - R$ 250 - Concluída</li>
+        <li>29/09/2026 - Revisão - R$ 450 - Em andamento</li>
+        <li>28/09/2026 - Alinhamento - R$ 150 - Aberta</li>
+
+    </ul>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

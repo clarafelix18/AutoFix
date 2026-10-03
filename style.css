@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f1fa;
+    color: #4b3b52;
+}
+
+/* LOGIN */
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #c9a7e8, #eadcf5);
+}
+
+.caixa {
+    background: white;
+    padding: 35px;
+    width: 330px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(90, 60, 110, 0.15);
+}
+
+.caixa h1 {
+    color: #8e5bb7;
+    margin-bottom: 5px;
+}
+
+.caixa p {
+    color: #8a7a91;
+}
+
+input,
+select {
+    width: calc(100% - 10px);
+    padding: 11px;
+    margin: 6px 5px;
+    border: 1px solid #d8c7e2;
+    border-radius: 8px;
+    outline: none;
+    background: #fcfaff;
+}
+
+input:focus,
+select:focus {
+    border-color: #a875cc;
+}
+
+/* BOTÕES */
+
+button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #9b6bc1;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #8150aa;
+    transform: translateY(-1px);
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #9b6bc1;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(80, 50, 100, 0.15);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    background: #ffffff;
+    color: #8e5bb7;
+}
+
+header button:hover {
+    background: #f1e8f7;
+}
+
+/* MENU */
+
+nav {
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid #e5d9eb;
+}
+
+nav button {
+    background: #eee3f5;
+    color: #70468c;
+}
+
+nav button:hover {
+    background: #d9c1e8;
+}
+
+/* CONTEÚDO */
+
+main {
+    padding: 30px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(90, 60, 110, 0.08);
+}
+
+section h2 {
+    color: #8050a5;
+}
+
+/* ESCONDER */
+
+.oculto {
+    display: none;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards div {
+    background: linear-gradient(135deg, #a875cc, #8e5bb7);
+    color: white;
+    padding: 25px;
+    width: 180px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 5px 12px rgba(100, 60, 130, 0.15);
+}
+
+.cards b {
+    font-size: 30px;
+}
+
+/* LISTAS */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    background: #faf6fc;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 7px;
+    border-left: 4px solid #a875cc;
+}
+
+/* MENSAGEM DE ERRO */
+
+#erro {
+    color: #c05b79;
+    font-size: 14px;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .cards {
