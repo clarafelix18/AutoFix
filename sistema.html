@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoFix</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,104 +25,110 @@
 
 <main>
 
-<!-- DASHBOARD -->
+    <section id="dashboard">
 
-<section id="dashboard">
+        <h2>Dashboard</h2>
 
-    <h2>Dashboard</h2>
+        <div class="cards">
 
-    <div class="cards">
-        <div>Clientes<br><b>3</b></div>
-        <div>Veículos<br><b>3</b></div>
-        <div>Ordens<br><b>3</b></div>
-    </div>
+            <div>
+                Clientes
+                <br>
+                <b id="totalClientes">0</b>
+            </div>
 
-</section>
+            <div>
+                Veículos
+                <br>
+                <b id="totalVeiculos">0</b>
+            </div>
 
+            <div>
+                Ordens
+                <br>
+                <b id="totalOS">0</b>
+            </div>
 
-<!-- CLIENTES -->
+        </div>
 
-<section id="clientes" class="oculto">
-
-    <h2>Clientes</h2>
-
-    <input id="nome" placeholder="Nome">
-    <input id="cpf" placeholder="CPF">
-    <input id="telefone" placeholder="Telefone">
-
-    <button onclick="adicionarCliente()">Cadastrar</button>
-
-    <input
-        id="busca"
-        placeholder="Buscar cliente"
-        onkeyup="buscar()"
-    >
-
-    <ul id="listaClientes">
-
-        <li>João Silva - 123.456.789-00</li>
-        <li>Maria Souza - 987.654.321-00</li>
-        <li>Carlos Lima - 111.222.333-44</li>
-
-    </ul>
-
-</section>
+    </section>
 
 
-<!-- VEÍCULOS -->
+    <section id="clientes" class="oculto">
 
-<section id="veiculos" class="oculto">
+        <h2>Clientes</h2>
 
-    <h2>Veículos</h2>
+        <input id="nome" placeholder="Nome">
+        <input id="cpf" placeholder="CPF">
+        <input id="telefone" placeholder="Telefone">
+        <input id="email" placeholder="E-mail">
 
-    <input id="placa" placeholder="Placa">
-    <input id="marca" placeholder="Marca">
-    <input id="modelo" placeholder="Modelo">
-    <input id="ano" placeholder="Ano">
+        <button onclick="adicionarCliente()">
+            Cadastrar
+        </button>
 
-    <button onclick="adicionarVeiculo()">
-        Cadastrar
-    </button>
+        <input
+            id="busca"
+            placeholder="Buscar por nome ou CPF"
+            oninput="carregarClientes()"
+        >
 
-    <ul id="listaVeiculos">
+        <ul id="listaClientes"></ul>
 
-        <li>ABC1234 - Fiat Uno - João Silva</li>
-        <li>DEF5678 - Volkswagen Gol - Maria Souza</li>
-        <li>GHI9012 - Toyota Corolla - Carlos Lima</li>
-
-    </ul>
-
-</section>
+    </section>
 
 
-<!-- ORDENS -->
+    <section id="veiculos" class="oculto">
 
-<section id="ordens" class="oculto">
+        <h2>Veículos</h2>
 
-    <h2>Ordens de Serviço</h2>
+        <input id="placa" placeholder="Placa">
+        <input id="marca" placeholder="Marca">
+        <input id="modelo" placeholder="Modelo">
+        <input id="ano" placeholder="Ano">
 
-    <input id="servico" placeholder="Serviço">
-    <input id="valor" placeholder="Valor">
+        <select id="clienteVeiculo">
+            <option value="">Selecione o cliente</option>
+        </select>
 
-    <select id="status">
-        <option>Aberta</option>
-        <option>Em andamento</option>
-        <option>Concluída</option>
-    </select>
+        <button onclick="adicionarVeiculo()">
+            Cadastrar
+        </button>
 
-    <button onclick="adicionarOS()">
-        Cadastrar
-    </button>
+        <ul id="listaVeiculos"></ul>
 
-    <ul id="listaOS">
+    </section>
 
-        <li>30/09/2026 - Troca de óleo - R$ 250 - Concluída</li>
-        <li>29/09/2026 - Revisão - R$ 450 - Em andamento</li>
-        <li>28/09/2026 - Alinhamento - R$ 150 - Aberta</li>
 
-    </ul>
+    <section id="ordens" class="oculto">
 
-</section>
+        <h2>Ordens de Serviço</h2>
+
+        <select id="clienteOS" onchange="carregarVeiculosOS()">
+            <option value="">Selecione o cliente</option>
+        </select>
+
+        <select id="veiculoOS">
+            <option value="">Selecione o veículo</option>
+        </select>
+
+        <input id="servico" placeholder="Serviço">
+        <input id="valor" type="number" placeholder="Valor">
+        <input id="dataOS" type="date">
+
+        <select id="status">
+            <option>Aberta</option>
+            <option>Em andamento</option>
+            <option>Concluída</option>
+        </select>
+
+        <button onclick="adicionarOS()">
+            Cadastrar
+        </button>
+
+        <ul id="listaOS"></ul>
+
+    </section>
 
 </main>
 
@@ -129,4 +136,3 @@
 
 </body>
 </html>
-

@@ -21,8 +21,8 @@ body {
 
 .caixa {
     background: white;
-    padding: 35px;
     width: 330px;
+    padding: 35px;
     text-align: center;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(90, 60, 110, 0.15);
@@ -30,7 +30,6 @@ body {
 
 .caixa h1 {
     color: #8e5bb7;
-    margin-bottom: 5px;
 }
 
 .caixa p {
@@ -63,12 +62,10 @@ button {
     background: #9b6bc1;
     color: white;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 button:hover {
     background: #8150aa;
-    transform: translateY(-1px);
 }
 
 /* CABEÇALHO */
@@ -80,7 +77,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 10px rgba(80, 50, 100, 0.15);
 }
 
 header h1 {
@@ -88,12 +84,8 @@ header h1 {
 }
 
 header button {
-    background: #ffffff;
+    background: white;
     color: #8e5bb7;
-}
-
-header button:hover {
-    background: #f1e8f7;
 }
 
 /* MENU */
@@ -107,10 +99,6 @@ nav {
 nav button {
     background: #eee3f5;
     color: #70468c;
-}
-
-nav button:hover {
-    background: #d9c1e8;
 }
 
 /* CONTEÚDO */
@@ -129,8 +117,6 @@ section {
 section h2 {
     color: #8050a5;
 }
-
-/* ESCONDER */
 
 .oculto {
     display: none;
@@ -151,7 +137,6 @@ section h2 {
     width: 180px;
     text-align: center;
     border-radius: 14px;
-    box-shadow: 0 5px 12px rgba(100, 60, 130, 0.15);
 }
 
 .cards b {
@@ -167,34 +152,15 @@ ul {
 li {
     background: #faf6fc;
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     border-radius: 7px;
     border-left: 4px solid #a875cc;
 }
 
-/* MENSAGEM DE ERRO */
+li button {
+    float: right;
+}
 
 #erro {
     color: #c05b79;
-    font-size: 14px;
 }
-
-/* CELULAR */
-
-@media (max-width: 700px) {
-
-    header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    .cards {
